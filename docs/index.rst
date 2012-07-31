@@ -59,7 +59,8 @@ SMTP mock in a test case::
 
     # Get the port number that this is faking on and
     # assign as appropriate to config files that the system being tested uses
-    settings.SMTP_HOST = "localhost:{0}".format(smtp_mock.pretend_port)
+    settings.SMTP_HOST = "localhost"
+    settings.SMTP_PORT = smtp_mock.pretend_port
 
     # ...run functionality that should cause an email to be sent
 
